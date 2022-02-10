@@ -61,5 +61,12 @@ namespace RegexPatternProblems
         {
             return Regex.IsMatch(prule3, PASSWORD_RULE3_REGEX);
         }
+        //Create a pattern for a Password rules thats start with cap and Has exactly 1 special character with all rules must be passed(UC8)
+        public static string PASSWORD_RULE4_REGEX = "^([a-zA-Z0-9])*[!@#$%^&*]{1}([a-zA-Z0-9])*$";
+        //Method For Paasword Rule-4 using regex(UC8).
+        public bool PasswordRule4(string prule4)
+        {
+            return Regex.IsMatch(prule4, PASSWORD_RULE4_REGEX);
+        }
    }
 }
