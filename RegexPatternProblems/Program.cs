@@ -12,7 +12,7 @@ namespace RegexPatternProblems
             Console.WriteLine("==========Welcome To User Registration Problems==========");
             Pattern program = new Pattern();
             Console.WriteLine("-->Please Choose To Which Program Is Executed<--");
-            Console.WriteLine("1.validateFirstName \n2.validateLastName \n3.Exit");
+            Console.WriteLine("1.validateFirstName \n2.validateLastName \n3.validateEmail \n4.Exit");
             Console.Write("Select Above Number:-> ");
             int option = Convert.ToInt32(Console.ReadLine());
             switch (option)
@@ -24,10 +24,15 @@ namespace RegexPatternProblems
                     Console.WriteLine(program.validateLastName(instr));//Print the output
                     break;
                 case 3:
+                    Console.WriteLine(program.validateEmail(instr));//Print the output
+                    break;
+                case 4:
                 default:
                     Console.WriteLine("Please Select Correct Number");
                     break;  
             }
+            Console.WriteLine("==================================================================");
+            Console.ReadLine();
         }
     }
 }
