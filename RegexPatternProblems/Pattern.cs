@@ -54,5 +54,12 @@ namespace RegexPatternProblems
         {
             return Regex.IsMatch(prule2, PASSWORD_RULE2_REGEX);
         }
+        //Create a pattern for a Password rules thats start with cap and At least 1 numeric number with all rules must be passed(UC7)
+        public static string PASSWORD_RULE3_REGEX = "^([a-zA-Z0-9])*[!@#$%^&*]{1}([a-zA-Z0-9])*$";
+        //Method For Paasword Rule-3 using regex(UC7).
+        public bool PasswordRule3(string prule3)
+        {
+            return Regex.IsMatch(prule3, PASSWORD_RULE3_REGEX);
+        }
    }
 }
