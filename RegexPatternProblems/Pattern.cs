@@ -33,5 +33,12 @@ namespace RegexPatternProblems
         {
             return Regex.IsMatch(email, EMAIL_REGEX);
         }
+        //Create a pattern for a defined Mobile Formate and country code follow by space and 10 digit number(UC4).
+        public static string MOBILE_NUMBER_REGEX = "^[1-9]{2}[6-9]{1}[0-9]{9}$";
+        //Method For Validate Mobile Number With Country Code using regex(UC4).
+        public bool validateMobileNumber(string mnumber)
+        {
+            return Regex.IsMatch(mnumber, MOBILE_NUMBER_REGEX);
+        }
    }
 }
