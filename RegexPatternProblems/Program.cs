@@ -4,7 +4,9 @@ namespace RegexPatternProblems
 {
     class Program
     {
-        public static string instr = Console.ReadLine();
+        //Takes an input from the user.
+        private static readonly string instr = Console.ReadLine();
+        //Main method
         static void Main(string[] args)
         {
             Console.WriteLine("==========Welcome To User Registration Problems==========");
@@ -16,10 +18,10 @@ namespace RegexPatternProblems
             switch (option)
             {
                 case 1:
-                    Console.WriteLine(program.validateFirstName(instr));
+                    Console.WriteLine(program.validateFirstName(instr));//Print the output
                     break;
                 case 2:
-                    Console.WriteLine(program.validateLastName(instr));
+                    Console.WriteLine(program.validateLastName(instr));//Print the output
                     break;
                 case 3:
                 default:

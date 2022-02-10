@@ -10,20 +10,19 @@ namespace RegexPatternProblems
     //Class name.
    public class Pattern 
    {
+        //Create a pattern for a first name thats start with cap and has min 3 characters (UC1)
         public static string FIRST_NAME_REGEX = "^[A-Z]{1}[A-Za-z]{2,}$"; //Minimum 3 Characters
-
-        //Method For Validate First Name.
+        //Method For Validate First Name using regex(UC1).
         public bool validateFirstName(string fname) 
-        {
+        { 
             return Regex.IsMatch(fname, FIRST_NAME_REGEX);
         }
-
+        //Create a pattern for a last name thats start with cap and has min 3 characters (UC2)
         public static string LAST_NAME_REGEX = "^[A-Z]{1}[A-Za-z]{2,}$"; //Minimum 3 Characters(Ram)
-
-        //Method For Validate Last Name(UC2).
+        //Method For Validate Last Name using regex(UC2).
         public bool validateLastName(string lname)
         {
             return Regex.IsMatch(lname, LAST_NAME_REGEX);
         }
-    }
+   }
 }
