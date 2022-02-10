@@ -40,5 +40,12 @@ namespace RegexPatternProblems
         {
             return Regex.IsMatch(mnumber, MOBILE_NUMBER_REGEX);
         }
+        //Create a pattern for a Password rules thats start with cap and min 8 characters with all rules must be passed(UC5)
+        public static string PASSWORD_RULE1_REGEX = "^([a-zA-Z0-9])*[!@#$%^&*]{1}([a-zA-Z0-9])*$";
+        //Method For Paasword Rule-1 using regex(UC5).
+        public bool PasswordRule1(string prule1)
+        {
+            return Regex.IsMatch(prule1, PASSWORD_RULE1_REGEX);
+        }
    }
 }
