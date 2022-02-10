@@ -17,5 +17,13 @@ namespace RegexPatternProblems
         {
             return Regex.IsMatch(fname, FIRST_NAME_REGEX);
         }
-   }
+
+        public static string LAST_NAME_REGEX = "^[A-Z]{1}[A-Za-z]{2,}$"; //Minimum 3 Characters(Ram)
+
+        //Method For Validate Last Name(UC2).
+        public bool validateLastName(string lname)
+        {
+            return Regex.IsMatch(lname, LAST_NAME_REGEX);
+        }
+    }
 }
