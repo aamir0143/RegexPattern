@@ -12,12 +12,13 @@ namespace RegexPatternProblems
             Console.WriteLine("==========Welcome To User Registration Problems==========");
             Pattern program = new Pattern();
             Console.WriteLine("-->Please Choose To Which Program Is Executed<--");
-            Console.WriteLine("1.validateFirstName \n2.validateLastName \n3.validateEmail \n4.validateMobileNumber \n5.PasswordRule1 \n6.PasswordRule2 \n7.PasswordRule3 \n8.PasswordRule4 \n9.Exit");
+            Console.WriteLine("1.Enter First Name \n2.Enter Last Name \n3.Enter Email \n4.Enter Mobile Numbers \n5.Enter Password Rule-1 \n6.Enter Password Rule-2 \n7.Enter Password Rule-3 \n8.Enter Password Rule-4 \n9.Check All Email Samples \n10.Exit");
             Console.Write("Select Above Number:-> ");
             int option = Convert.ToInt32(Console.ReadLine());
             switch (option)
             {
                 case 1:
+                    Console.Write("Enter First Name: ");
                     Console.WriteLine(program.validateFirstName(instr));//Print the output
                     break;
                 case 2:
@@ -42,9 +43,24 @@ namespace RegexPatternProblems
                     Console.WriteLine(program.PasswordRule4(instr));//Print the output
                     break;
                 case 9:
+                    bool isCheckAnother = true;
+                    while (isCheckAnother)
+                    {
+                        Console.WriteLine("Type new Email: ");
+                        string testMail = Console.ReadLine();
+                        Console.WriteLine(program.validateEmail(testMail));
+                        Console.WriteLine("Need to check anorher ? \n1.YES \n2.NO");
+                        int ar = Convert.ToInt32(Console.ReadLine());
+                        if (ar == 2)
+                        {
+                            isCheckAnother = false;
+                        }
+                    }
+                    break;
+
                 default:
                     Console.WriteLine("Please Select Correct Number");
-                    break;  
+                    break; 
             }
             Console.WriteLine("==================================================================");
             Console.ReadLine();
