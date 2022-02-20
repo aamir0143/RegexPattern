@@ -1,27 +1,39 @@
-﻿// See https://aka.ms/new-console-template for more information
-using System;
-namespace RegexPatternProblems
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+namespace RegexPatternProblems 
 {
     class Program
     {
-        public static string instr = Console.ReadLine();
         static void Main(string[] args)
         {
+            //Displaying the welcome message
             Console.WriteLine("==========Welcome To User Registration Problems==========");
-            Pattern program = new Pattern();
-            Console.WriteLine("-->Please Choose To Which Program Is Executed<--");
-            Console.WriteLine("1.validateFirstName \n2.Exit");
-            Console.Write("Select Above Number:-> ");
-            int option = Convert.ToInt32(Console.ReadLine());
-            switch (option)
+            RegexPattern pattern = new RegexPattern();//Create Objects
+            bool flag = true;
+            while (flag)
             {
-                case 1:
-                    Console.WriteLine(program.validateFirstName(instr));
-                    break;
-                case 2:
-                default:
-                    Console.WriteLine("Please Select Correct Number");
-                    break;  
+                Console.WriteLine();
+                Console.WriteLine("\t-->Select To Programs Which can be executed<--");
+                Console.WriteLine("\t1.Enter First Name \n\t2.Exit");
+                Console.Write("\tEnter Numbers: ");
+                int option = Convert.ToInt32(Console.ReadLine());
+                switch (option)
+                {
+                    case 1:
+                        //Validating user entered a valid firstname or not(UC1)
+                        Console.Write("\tEnter Your First Name: ");
+                        pattern.CheckFirstName();//Call the Method.
+                        break;
+                    case 2:
+                        flag = false;
+                        break;
+                    default:
+                        Console.WriteLine("\tSelect Correct Number");
+                        break;
+                }
             }
         }
     }
