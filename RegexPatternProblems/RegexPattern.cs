@@ -7,6 +7,7 @@ using System.Text.RegularExpressions;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 namespace RegexPatternProblems 
 {
 <<<<<<< HEAD
@@ -29,6 +30,11 @@ namespace RegexPatternProblems
 {
     public class RegexPattern
 >>>>>>> UC7_PasswordRule-3
+=======
+namespace RegexPatternProblems
+{
+    public class RegexPattern
+>>>>>>> UC8_PasswordRule-4
     {
         //Method to check and take the first name using regex(UC1)
         public void CheckFirstName()
@@ -36,6 +42,7 @@ namespace RegexPatternProblems
             string firstName = Console.ReadLine();
             //Pattern for checking the first name that starts with cap and has min 3 characters(UC1)
             string fNamePattern = "(^[A-Z]{1}[a-z]{2,}$)";
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -54,6 +61,8 @@ namespace RegexPatternProblems
 >>>>>>> UC6_PasswordRule-2
 =======
 >>>>>>> UC7_PasswordRule-3
+=======
+>>>>>>> UC8_PasswordRule-4
             if (Regex.IsMatch(firstName, fNamePattern))
             {
                 Console.WriteLine("\tThe entered first name is valid");
@@ -70,6 +79,7 @@ namespace RegexPatternProblems
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             //Pattern for checking the last name that starts with cap and has minimum 3 characters(UC2)
 =======
             //Pattern for checking the last name that starts with cap and has min 3 characters(UC2)
@@ -80,6 +90,9 @@ namespace RegexPatternProblems
 =======
             //Pattern for checking the last name that starts with cap and has min 3 characters(UC2)
 >>>>>>> UC7_PasswordRule-3
+=======
+            //Pattern for checking the last name that starts with cap and has min 3 characters(UC2)
+>>>>>>> UC8_PasswordRule-4
             string lNamePattern = "(^[A-Z]{1}[a-z]{2,}$)";
             if (Regex.IsMatch(lastName, lNamePattern))
             {
@@ -91,12 +104,15 @@ namespace RegexPatternProblems
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> UC2_ValidLastName
 =======
 =======
 >>>>>>> UC6_PasswordRule-2
 =======
 >>>>>>> UC7_PasswordRule-3
+=======
+>>>>>>> UC8_PasswordRule-4
             }
         }
         //Method to check and take the valid email using regex(UC3)
@@ -131,6 +147,7 @@ namespace RegexPatternProblems
         }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         //Method to check and take the valid password using regex(UC5)
         public void CheckPassword()
         {
@@ -154,6 +171,18 @@ namespace RegexPatternProblems
             string passwordPattern = "^(?=.*[A-Z])(?=.*[0-9])[0-9a-zA-Z]{8,}$";
 >>>>>>> UC7_PasswordRule-3
             if (Regex.IsMatch(password, passwordPattern))
+=======
+        //Method to check and take the valid password using regex(UC5,UC6,UC7 & UC8)
+        public void CheckPassword()
+        {
+            string password = Console.ReadLine();
+            //Pattern for checking the password for having atleast one uppercase and number and exactly one special character(UC5,UC6,UC7 & UC8)
+            string passwordPattern = "^(?=.*[A-Z])(?=.*[\\d])(?=.*[\\W])[a-zA-Z0-9[~!@#$%^&*()_+{}:\"<>?]{8,}$";
+            string specialChar = "[~!@#$%^&*()_+{}:\" <>?]";
+            int count = Regex.Matches(password, specialChar).Count;
+            Console.WriteLine(count);
+            if (Regex.IsMatch(password, passwordPattern) && count == 1)
+>>>>>>> UC8_PasswordRule-4
             {
                 Console.WriteLine("\tThe given password is valid");
             }
@@ -162,11 +191,14 @@ namespace RegexPatternProblems
                 Console.WriteLine("\tThe given password is not valid");
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> UC5_PasswordRule-1
 =======
 >>>>>>> UC6_PasswordRule-2
 =======
 >>>>>>> UC7_PasswordRule-3
+=======
+>>>>>>> UC8_PasswordRule-4
             }
         }
     }
