@@ -28,7 +28,7 @@ namespace RegexPatternProblems
                         pattern.CheckFirstName();//Call the Method.
                         break;
                     case 2:
-                        //Validating user entered a valid firstname or not(UC1)
+                        //Validating user entered a valid Lastname or not(UC2)
                         Console.Write("\tEnter Your Last Name: ");
                         pattern.CheckLastName();//Call the Method.
                         break;

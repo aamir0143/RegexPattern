@@ -27,7 +27,7 @@ namespace RegexPatternProblems
         public void CheckLastName()
         {
             string lastName = Console.ReadLine();
-            //Pattern for checking the last name that starts with cap and has min 3 characters(UC2)
+            //Pattern for checking the last name that starts with cap and has minimum 3 characters(UC2)
             string lNamePattern = "(^[A-Z]{1}[a-z]{2,}$)";
             if (Regex.IsMatch(lastName, lNamePattern))
             {
