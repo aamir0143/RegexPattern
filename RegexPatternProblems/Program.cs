@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+<<<<<<< HEAD
 namespace RegexPatternProblems 
 {
     class Program
@@ -13,10 +14,17 @@ namespace RegexPatternProblems
         //Main method
 =======
 >>>>>>> UC1_ValidFirstName
+=======
+namespace RegexPatternProblems
+{
+    class Program
+    {
+>>>>>>> UC2_ValidLastName
         static void Main(string[] args)
         {
             //Displaying the welcome message
             Console.WriteLine("==========Welcome To User Registration Problems==========");
+<<<<<<< HEAD
 <<<<<<< HEAD
             Pattern program = new Pattern();
             Console.WriteLine("-->Please Choose To Which Program Is Executed<--");
@@ -77,6 +85,15 @@ namespace RegexPatternProblems
                 Console.WriteLine();
                 Console.WriteLine("\t-->Select To Programs Which can be executed<--");
                 Console.WriteLine("\t1.Enter First Name \n\t2.Exit");
+=======
+            RegexPattern pattern = new RegexPattern();//Create Objects
+            bool flag = true;
+            while (flag)
+            {
+                Console.WriteLine();
+                Console.WriteLine("\t-->Select To Programs Which can be executed<--");
+                Console.WriteLine("\t1.Enter First Name \n\t2.Enter Last Name \n\t3.Exit");
+>>>>>>> UC2_ValidLastName
                 Console.Write("\tEnter Numbers: ");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
@@ -87,13 +104,24 @@ namespace RegexPatternProblems
                         pattern.CheckFirstName();//Call the Method.
                         break;
                     case 2:
+<<<<<<< HEAD
+=======
+                        //Validating user entered a valid Lastname or not(UC2)
+                        Console.Write("\tEnter Your Last Name: ");
+                        pattern.CheckLastName();//Call the Method.
+                        break;
+                    case 3:
+>>>>>>> UC2_ValidLastName
                         flag = false;
                         break;
                     default:
                         Console.WriteLine("\tSelect Correct Number");
                         break;
                 }
+<<<<<<< HEAD
 >>>>>>> UC1_ValidFirstName
+=======
+>>>>>>> UC2_ValidLastName
             }
             Console.WriteLine("==================================================================");
             Console.ReadLine();
