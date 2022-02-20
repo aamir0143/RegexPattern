@@ -43,7 +43,7 @@ namespace RegexPatternProblems
                         pattern.CheckMobileNumber();//Call the Method.
                         break;
                     case 5:
-                        //Validating user entered a valid Password or not(UC5&UC6)
+                        //Validating user entered a valid Password or not(UC5&UC6&UC7)
                         Console.Write("\tEnter Your Password: ");
                         pattern.CheckPassword();//Call the Method. 
                         break;
