@@ -1,15 +1,23 @@
-﻿// See https://aka.ms/new-console-template for more information
-using System;
-namespace RegexPatternProblems
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+namespace RegexPatternProblems 
 {
     class Program
     {
+<<<<<<< HEAD
         //Takes an input from the user.
         private static readonly string instr = Console.ReadLine();
         //Main method
+=======
+>>>>>>> UC1_ValidFirstName
         static void Main(string[] args)
         {
+            //Displaying the welcome message
             Console.WriteLine("==========Welcome To User Registration Problems==========");
+<<<<<<< HEAD
             Pattern program = new Pattern();
             Console.WriteLine("-->Please Choose To Which Program Is Executed<--");
             Console.WriteLine("1.Enter First Name \n2.Enter Last Name \n3.Enter Email \n4.Enter Mobile Numbers \n5.Enter Password Rule-1 \n6.Enter Password Rule-2 \n7.Enter Password Rule-3 \n8.Enter Password Rule-4 \n9.Check All Email Samples \n10.Exit");
@@ -61,6 +69,31 @@ namespace RegexPatternProblems
                 default:
                     Console.WriteLine("Please Select Correct Number");
                     break; 
+=======
+            RegexPattern pattern = new RegexPattern();//Create Objects
+            bool flag = true;
+            while (flag)
+            {
+                Console.WriteLine();
+                Console.WriteLine("\t-->Select To Programs Which can be executed<--");
+                Console.WriteLine("\t1.Enter First Name \n\t2.Exit");
+                Console.Write("\tEnter Numbers: ");
+                int option = Convert.ToInt32(Console.ReadLine());
+                switch (option)
+                {
+                    case 1:
+                        //Validating user entered a valid firstname or not(UC1)
+                        Console.Write("\tEnter Your First Name: ");
+                        pattern.CheckFirstName();//Call the Method.
+                        break;
+                    case 2:
+                        flag = false;
+                        break;
+                    default:
+                        Console.WriteLine("\tSelect Correct Number");
+                        break;
+                }
+>>>>>>> UC1_ValidFirstName
             }
             Console.WriteLine("==================================================================");
             Console.ReadLine();
